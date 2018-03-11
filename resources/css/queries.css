@@ -97,6 +97,10 @@
     h2 { font-size: 140% }
     .long-copy { width: 100% }
     
+    blockquote { margin-bottom: 2rem }
+    
+    blockquote:before { top: -30px; }
+    
     .plan-box {
         margin: 10px 0;
     }
