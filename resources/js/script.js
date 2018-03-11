@@ -12,10 +12,6 @@ $(function(){
 		}
 	});
     
-    // Smooth scroll plugin ====================
-    smoothScroll.init({
-        speed: 900
-    });
     
     // mobile navigation
     $('.mobile-nav-icon').click(function(){
@@ -34,7 +30,62 @@ $(function(){
         }
     
 });
+    
+    /*var waypoints = $('#handler-first').waypoint(function(direction) {
+      notify(this.element.id + ' hit 25% from top of window') 
+    }, {
+      offset: '25%'
+    });*/
+    
+    // animations on scroll
+    $('.js-wp-1').waypoint(function(direction){
+       $('.js-wp-1').addClass('animated fadeIn'); 
+    } , {
+        offset: '50%'
+    });
+    
+    $('.js-wp-2').waypoint(function(direction){
+       $('.js-wp-2').addClass('animated fadeInUp'); 
+    } , {
+        offset: '50%'
+    });
+    
+    $('.js-wp-3').waypoint(function(direction){
+       $('.js-wp-3').addClass('animated fadeIn'); 
+    } , {
+        offset: '50%'
+    });
+    
+    $('.js-wp-4').waypoint(function(direction){
+       $('.js-wp-4').addClass('animated pulse'); 
+    } , {
+        offset: '50%'
+    });
+    
+    // maps
+    var map = new GMaps({
+      div: '#map',
+      lat: 31.041455, 
+      lng: 31.35,
+      zoom: 14
+    });
+    
+    map.addMarker({
+      lat: 31.041455,
+      lng: 31.34782,
+      title: 'Mansoura',
+      infoWindow: {
+      content: '<p>Our Mansoura HQ</p>'
+    }
+    });
 
+    
+    
+
+    // Smooth scroll plugin ====================
+    smoothScroll.init({
+        speed: 900
+    });
 
 
 
